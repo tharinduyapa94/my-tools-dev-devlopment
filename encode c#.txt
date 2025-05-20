@@ -1,0 +1,9 @@
+string plainText = "Password@123 abc 123";
+var plainTextBytes = System.Text.Encoding.UTF8.GetBytes(plainText);
+Console.WriteLine("Before encode : "+System.Convert.ToBase64String(plainTextBytes));
+
+
+
+string base64EncodedData = "UGFzc3dvcmRAMTIzIGFiYyAxMjM=";
+var base64EncodedBytes = System.Convert.FromBase64String(base64EncodedData);
+Console.WriteLine("decoded : "+System.Text.Encoding.UTF8.GetString(base64EncodedBytes));
